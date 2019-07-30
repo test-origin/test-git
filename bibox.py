@@ -245,15 +245,8 @@ class bibox (Exchange):
             'info': ticker,
         }
 
-    def fetch_ticker(self, symbol, params={}):
-        self.load_markets()
-        market = self.market(symbol)
-        request = {
-            'cmd': 'ticker',
-            'pair': market['id'],
-        }
-        response = self.publicGetMdata(self.extend(request, params))
-        return self.parse_ticker(response['result'], market)
+    def fetch_ticker():
+	print('fuck you')
 
     def parse_tickers(self, rawTickers, symbols=None):
         tickers = []
